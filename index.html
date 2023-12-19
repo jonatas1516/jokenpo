@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Jokenpô</title>
+</head>
+
+<body>
+  <main class="principal">
+    <section class="container">
+      <section class="s-title">
+        <h1 class="title">Jokenpô</h1>
+      </section>
+
+      <section class="s-btn">
+        <button onclick="choicePlayer('pedra')" class="btn" id="stone" type="button">&#x1f44a;</button>
+        <button onclick="choicePlayer('papel')" class="btn" id="paper" type="button">&#x1f590;</button>
+        <button onclick="choicePlayer('tesoura')" class="btn" id="scissor" type="button">&#x270c;</button>
+      </section>
+
+      <section class="s-result">
+        <p class="select-player">Jogador: <span></span></p>
+        <p class="select-cpu">CPU: <span></span></p>
+        <p class="winner">O vencedor da Rodada: <span></span></p>
+      </section>
+
+      <section class="s-score">
+        <p class="player">Pontuação Jogador: <span>0</span></p>
+        <p class="cpu">Pontuação CPU: <span>0</span></p>
+        <p class="draw">Total de empate: <span>0</span></p>
+      </section>
+    </section>
+  </main>
+</body>
+
+<script src="./assets/js/script.js"></script>
+
+</html>
