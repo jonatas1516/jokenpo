@@ -16,12 +16,22 @@ let scoreCpu = 0;
 
 let draw = 0;
 
+const GAME_OPTIONS = {
+  STONE: "stone",
+  PAPER: "paper",
+  SCISSOR: "scissor",
+};
+
 const choicePlayer = (choicePlayer) => {
   game(choicePlayer, choiceCPU());
 };
 
 const choiceCPU = () => {
-  const choices = ["pedra", "papel", "tesoura"];
+  const choices = [
+    GAME_OPTIONS.STONE,
+    GAME_OPTIONS.PAPER,
+    GAME_OPTIONS.SCISSOR,
+  ];
   const randomNumber = Math.floor(Math.random() * 3);
   return choices[`${randomNumber}`];
 };
@@ -32,9 +42,9 @@ const game = (player, cpu) => {
   //console.log("CPU: " + `${cpu}`);
 
   if (
-    (player === "pedra" && cpu === "tesoura") ||
-    (player === "papel" && cpu === "pedra") ||
-    (player === "tesoura" && cpu === "papel")
+    (player === GAME_OPTIONS.STONE && cpu === GAME_OPTIONS.SCISSOR) ||
+    (player === GAME_OPTIONS.PAPER && cpu === GAME_OPTIONS.STONE) ||
+    (player === GAME_OPTIONS.SCISSOR && cpu === GAME_OPTIONS.PAPER)
   ) {
     win.innerHTML = "Você ganhou";
 
@@ -57,17 +67,17 @@ const game = (player, cpu) => {
 };
 
 const choiceTag = (player, cpu) => {
-  if (player === "pedra") {
+  if (player === GAME_OPTIONS.STONE) {
     player1.innerHTML = "&#x1f44a;";
-  } else if (player === "papel") {
+  } else if (player === GAME_OPTIONS.PAPER) {
     player1.innerHTML = "&#x1f590;";
   } else {
     player1.innerHTML = "&#x270c;";
   }
 
-  if (cpu === "pedra") {
+  if (cpu === GAME_OPTIONS.STONE) {
     cpu1.innerHTML = "&#x1f44a;";
-  } else if (cpu === "papel") {
+  } else if (cpu === GAME_OPTIONS.PAPER) {
     cpu1.innerHTML = "&#x1f590;";
   } else {
     cpu1.innerHTML = "&#x270c;";
