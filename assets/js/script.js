@@ -23,7 +23,7 @@ const choicePlayer = (choicePlayer) => {
 const choiceCPU = () => {
   const choices = ["pedra", "papel", "tesoura"];
   const randomNumber = Math.floor(Math.random() * 3);
-  return choices[randomNumber];
+  return choices[`${randomNumber}`];
 };
 
 const game = (player, cpu) => {
