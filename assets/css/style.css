@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Neue", cursive;
+  text-align: center;
+}
+
+.principal {
+  background: url("https://source.unsplash.com/1600x900/?landscape");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 2rem;
+  background-color: aliceblue;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: xx-large;
+}
+
+.s-btn,
+.s-result,
+.s-score {
+  margin-top: 3rem;
+}
+
+.s-btn {
+  display: flex;
+  gap: 40px;
+}
+
+.btn {
+  width: 7rem;
+  height: 7rem;
+  padding: 10px;
+  font-size: 60px;
+  cursor: pointer;
+  border-radius: 1rem;
+  border: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.btn:active {
+  opacity: 0.3;
+  transition: 0.5s;
+}
+
+#stone {
+  background-color: purple;
+}
+
+#paper {
+  background-color: darkgreen;
+}
+
+#scissor {
+  background-color: rgb(130, 224, 255);
+}
+
+.s-result,
+.s-score {
+  font-size: x-large;
+}
+
+.s-result p span,
+.s-score p span {
+  font-weight: bold;
+}
+
+.select-player,
+.select-cpu {
+  display: inline-block;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  text-align: center;
+}
+
+.s-score p {
+  margin-top: 0.8rem;
+}
+
+.winner span {
+  color: green;
+}
+
+.player span {
+  color: blue;
+}
+
+.cpu span {
+  color: red;
+}
